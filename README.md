@@ -22,9 +22,9 @@ Figure 1. Original results of 4096 points
 
 ## Qualitative Results:
 
-Figure 3. Final results containing 1024 + 3072*3 = 10240 points
+Figure 2. Final results containing 1024 + 3072*3 = 10240 points
 
-Figure 4: Meshes generated from original point cloud (left) and upsampled point cloud (right)
+Figure 3: Meshes generated from original point cloud (left) and upsampled point cloud (right)
 
 As we saw with the cubestack and corgi examples, we managed to achieve higher point densities through recursive upsampling. We managed to do so while retaining many important features, as well as smoothing out some of the holes and color gaps. Thus, we are able to enhance the visual detail, as well as add more density. To help confirm that the fidelity increases, we converted the point clouds into meshes for qualitative comparisons. We see that many of the holes in the ears and paws are patched up, and the general shape is more similar to an actual corgi, though the tail of the mesh still possesses artifacts in the tails for both meshes. 
 
@@ -35,7 +35,7 @@ To get some more solid results, we analyzed our point clouds and meshes using va
 
 While analyzing the meshes, we measured five main metrics: vertex count, face count, smoothness score, surface area variation, and surface normal consistency. Smoothness score was the average of angles between adjacent faces in the mesh, and surface normal consistency averages the dot product between adjacent surface normals. In both metrics, our mesh outperformed the original, indicating that our surface was smoother and contained less artifacts. The surface area variation measures the uniformity of face size, and once again our upsampled mesh outperformed the original. Because this was achievable with a lower vertex and face count, our model can represent more complex features with smoother surfaces and more consistency, a good preliminary result.
 
-Figure 5: Mesh metric comparison
+Figure 4: Mesh metric comparison
 
 ## Conclusion
 
